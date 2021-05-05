@@ -1,0 +1,38 @@
+.image_container{
+    position: relative;
+    bottom: -35rem;
+    z-index: 5;
+}
+
+.image_sub_container{
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    transform: scale(1);
+}
+.image_sub_container img{
+    transform: scale(1);
+    height: 105%;
+    width: 105%;
+}
+@keyframes containerscale{
+    from{transform: scale(1)}
+    to {transform: scale(.99);}
+}
+@keyframes imgscale{
+    from{transform: scale(1)}
+    to {transform: scale(1.05);}
+}
+.image_sub_container:hover {
+    animation: containerscale .5s ease-in;
+    transform: scale(.99);
+    cursor: pointer;
+}
+.image_sub_container:hover img{
+    animation: imgscale .5s ease-out;
+    transform: scale(1.05);
+}
+h3 span{
+    font-size: 14px;
+    font-weight: 400;
+}

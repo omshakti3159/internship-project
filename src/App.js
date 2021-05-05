@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import React, { useState } from 'react'
+import Home from './components/Home'
+import Navbar from './components/Navbar'
+import './App.css'
+const App = () => {
+    const [loading,setloading]=useState(false)
+    const [loadctn,setctn]= useState(false)
+    setTimeout(()=>{setctn(true)},3800)
+    setTimeout(()=>{setloading(true)},3000)
+    function loadContent(){
+        if(loadctn)
+        return <Home/>
+        else
+            return <div></div>
+    }
+    function preloading(){
+      if(loading)
+        return(
+            <div className="load">
+        <div className="loading_screen">
+        </div>
+        {loadContent()}
     </div>
-  );
+    )
+    else
+        return(
+            <>
+            <div className="loading_text">I am Preloading Screen</div>
+        </>
+        )
+    }
+    return (
+        <div >
+            <Navbar/>
+            <div id="load">
+                {preloading()}
+            </div>  
+        </div>
+    )
 }
-
-export default App;
+export default App

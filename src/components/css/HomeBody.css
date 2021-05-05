@@ -1,0 +1,26 @@
+.body_container{
+
+    box-sizing: content-box;
+    position: absolute;
+    top: 800px;
+    display: flex;
+    width: 100vw;
+}
+.body_container p{
+    position: absolute;
+    top: 22rem;
+    left: 50rem;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 0.9;
+}
+.left,.right{
+    width:50%;
+    text-align: center;
+}
+.left{
+    margin-top:9rem ;
+}
+.right{
+    padding-right: 40px;
+}

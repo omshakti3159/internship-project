@@ -1,0 +1,48 @@
+.whatsnew_container{
+    box-sizing: content-box;
+    position: relative;
+    bottom: -232rem;
+    height: 25rem;
+    background-color: rgba(240, 240, 240, 0.534);
+    display: flex;
+    width: 100vw;
+    height: 30rem;
+}
+.whatsnew_container .heading{
+    width: 40%;
+    padding-top: 8rem;
+    font-size: 40px;
+    letter-spacing: 0.1px;
+    font-weight: 50;
+    line-height: 0.95;
+    text-align: center;
+}
+.whatsnew_container .content{
+    padding-top:100px ;
+    width: 60%;
+}
+.content_text{
+    width: 90%;
+   padding: 15px 0 5px 0;
+   margin: 25px 0 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+.content_text span:first-child{
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.content_text span{
+    font-size: 30px;
+    font-weight: 100;
+}
+.content_text span:last-child{
+    font-size: 15px;
+    font-weight: 600;
+}
+.divider{
+    height: 1px;
+    background-color: rgb(180, 180, 180);
+    width: 90%;
+}
